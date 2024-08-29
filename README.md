@@ -57,6 +57,8 @@ L1_RPC_URL=
 
 L1_BLOCK_TIME=12
 
+OP_NODE_L1_BEACON=http://testing.holesky.beacon-api.nimbus.team/
+
 # The chain identifier for the L2 network
 L2_CHAIN_ID=17000   # Sepolia: 11155111   Holesky: 17000
 
