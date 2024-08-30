@@ -1,5 +1,13 @@
 ## One-click containerized deployment for [opstack]("https://github.com/ethereum-optimism/optimism")
 
+> [!TOC]
+>
+> [Requirements](#requirements)
+>
+> [Start](#start)
+>
+> [Reset](#reset)
+
 ### Requirements
 
 - Docker
