@@ -5,14 +5,17 @@
 - Docker
 - Docker compose plugin
 
-> [!NOTE] 
+> [!NOTE]
 > Install on Amazon linux 2023:
 >
 > [Install and configure Docker on Amazon Linux 2023](https://gist.github.com/thimslugga/36019e15b2a47a48c495b661d18faa6d#install-and-configure-docker-on-amazon-linux-2023)
 >
 > [Install the Docker Compose v2 CLI Plugin](https://gist.github.com/thimslugga/36019e15b2a47a48c495b661d18faa6d#install-the-docker-compose-v2-cli-plugin)
 
-### Environments
+### Start
+
+#### Setup Environments
+
 Rename `.env.example` to `.env`, then set the environment variables as needed.
 
 ```shell
@@ -55,4 +58,26 @@ L2_CHAIN_ID=17000   # Sepolia: 11155111   Holesky: 17000
 
 L2_BLOCK_TIME=2
 
+```
+
+#### Run
+
+```shell
+./run
+```
+
+### Reset
+
+```shell
+// Stop all working opstack containers
+docker stop $(docker ps -a -q -f "name=opstack-*")
+
+// Remove opstack images
+docker rmi $(docker images -f "reference=opstack-*" -q)
+
+// Clean data
+./clean
+
+// Redeploy
+./run
 ```
