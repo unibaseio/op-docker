@@ -1,8 +1,8 @@
 # One-click containerized deployment for [opstack]("https://github.com/ethereum-optimism/optimism")
 
 - [Requirements](#requirements)
-- [Start](#start)
-- [Reset](#reset)
+- [Start deployment](#start-deployment)
+- [Reset deployment](#reset-deployment)
 
 ## Requirements
 
@@ -16,7 +16,7 @@
 >
 > [Install the Docker Compose v2 CLI Plugin](https://gist.github.com/thimslugga/36019e15b2a47a48c495b661d18faa6d#install-the-docker-compose-v2-cli-plugin)
 
-## Start
+## Start deployment
 
 ### Setup Environments
 
@@ -70,18 +70,28 @@ L2_BLOCK_TIME=2
 ./run
 ```
 
-## Reset
+## Reset deployment
+
+Stop all working opstack containers
 
 ```shell
-// Stop all working opstack containers
 docker stop $(docker ps -a -q -f "name=opstack-*")
+```
 
-// Remove opstack images
+Remove opstack images
+
+```shell
 docker rmi $(docker images -f "reference=opstack-*" -q)
+```
 
-// Clean data
+Clean data
+
+```shell
 ./clean
+```
 
-// Redeploy
+Redeploy
+
+```shell
 ./run
 ```
