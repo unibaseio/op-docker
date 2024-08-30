@@ -9,9 +9,9 @@ NC='\e[0m'
 
 config_path=data/configurations
 default_optimism_repo=https://github.com/ethereum-optimism/optimism.git
-default_optimism_version=op-node/v1.3.0
+default_optimism_version=op-node/v1.9.0
 default_opgeth_repo=https://github.com/ethereum-optimism/op-geth.git
-default_opgeth_version=v1.101304.2
+default_opgeth_version=v1.101315.3
 
 set -e
 
