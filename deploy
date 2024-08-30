@@ -305,8 +305,8 @@ set_basic_settings() {
   L1_CHAIN_ID=$(get_l1_chain_id "$L1_RPC_URL")
   L1_KIND=$(detect_l1_kind "$L1_RPC_URL" "$L1_CHAIN_ID")
   echo -e "L1 Chain ID: $L1_CHAIN_ID (Detected as ${GREEN}$L1_KIND${NC})"
-  read -rp "L2 chain ID (default: 42069): " L2_CHAIN_ID
-  L2_CHAIN_ID=${L2_CHAIN_ID:-42069}
+  read -rp "L2 chain ID (default: 43134): " L2_CHAIN_ID
+  L2_CHAIN_ID=${L2_CHAIN_ID:-43134}
 
   read -rp "Use custom optimism monorepo (default: $default_optimism_repo <-> $default_optimism_version)? (y/n): " custom_optimism_decision
 
