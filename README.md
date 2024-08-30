@@ -1,10 +1,10 @@
-## One-click containerized deployment for [opstack]("https://github.com/ethereum-optimism/optimism")
+# One-click containerized deployment for [opstack]("https://github.com/ethereum-optimism/optimism")
 
 - [Requirements](#requirements)
 - [Start](#start)
 - [Reset](#reset)
 
-### Requirements
+## Requirements
 
 - Docker
 - Docker compose plugin
@@ -16,9 +16,9 @@
 >
 > [Install the Docker Compose v2 CLI Plugin](https://gist.github.com/thimslugga/36019e15b2a47a48c495b661d18faa6d#install-the-docker-compose-v2-cli-plugin)
 
-### Start
+## Start
 
-#### Setup Environments
+### Setup Environments
 
 Rename `.env.example` to `.env`, then set the environment variables as needed.
 
@@ -64,13 +64,13 @@ L2_BLOCK_TIME=2
 
 ```
 
-#### Run
+### Run
 
 ```shell
 ./run
 ```
 
-### Reset
+## Reset
 
 ```shell
 // Stop all working opstack containers
