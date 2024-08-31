@@ -1,16 +1,17 @@
 # One-click containerized deployment for [opstack]("https://github.com/ethereum-optimism/optimism")
 
-- [Requirements](#requirements)
+- [Prerequisites](#prerequisites)
 - [Start deployment](#start-deployment)
+- [Upgrade](#upgrade)
 - [Reset deployment](#reset-deployment)
 
-## Requirements
+## Prerequisites
 
 - Docker
 - Docker compose plugin
 
 > [!NOTE]
-> Install on Amazon linux 2023:
+> Example: install on Amazon linux 2023:
 >
 > [Install and configure Docker on Amazon Linux 2023](https://gist.github.com/thimslugga/36019e15b2a47a48c495b661d18faa6d#install-and-configure-docker-on-amazon-linux-2023)
 >
@@ -50,10 +51,10 @@ DEPLOYER_PRIVATE_KEY=$ADMIN_PRIVATE_KEY
 # The kind of RPC provider, used to inform optimal transactions receipts
 # fetching. Valid options: alchemy, quicknode, infura, parity, nethermind,
 # debug_geth, erigon, basic, any.
-L1_RPC_KIND=
+L1_RPC_KIND=alchemy
 
 # RPC URL for the L1 network to interact with
-L1_RPC_URL=
+L1_RPC_URL=xxxxxxx
 
 L1_BLOCK_TIME=12
 
@@ -70,6 +71,25 @@ L2_BLOCK_TIME=2
 
 ```shell
 ./run
+```
+
+## Upgrade
+
+You can find the latest optimism release here: [https://github.com/ethereum-optimism/optimism/releases](https://github.com/ethereum-optimism/optimism/releases), then update the branch or commit version.
+
+```shell
+OPTIMISM_REPO_URL=https://github.com/ethereum-optimism/optimism.git
+OPTIMISM_BRANCH_OR_COMMIT=v1.9.0        # optimism release version
+
+OP_GETH_REPO_URL=https://github.com/ethereum-optimism/op-geth.git
+OP_GETH_BRANCH_OR_COMMIT=v1.101315.3    # op-geth release version
+```
+
+Finally, restart all opstack services
+
+```shell
+cd ~/op-docker
+docker compose up -d
 ```
 
 ## Reset deployment
