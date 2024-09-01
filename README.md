@@ -1,7 +1,7 @@
 # op-docker
-## One-command containerized deployment for [opstack l2]("https://github.com/ethereum-optimism/optimism")
+## One-command containerized deployment for [opstack L2]("https://github.com/ethereum-optimism/optimism")
 
-If you've deployed your own l2 following the [optimism tutorials](https://docs.optimism.io/builders/chain-operators/tutorials/create-l2-rollup), you'll notice there’s a lot of repetitive work involved. This project is perfect for you to quickly deploy an opstack l2 with a single command.
+If you've deployed your own L2 following the [optimism tutorials](https://docs.optimism.io/builders/chain-operators/tutorials/create-l2-rollup), you'll notice there’s a lot of repetitive work involved. This project is perfect for you to quickly deploy an opstack L2 with a single command.
 
 - [Prerequisites](#prerequisites)
 - [Start deployment](#start-deployment)
