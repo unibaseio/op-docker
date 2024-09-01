@@ -70,7 +70,7 @@ L2_BLOCK_TIME=2
 
 ```
 
-### Run
+### Deploy L2 in one command !!!
 
 ```shell
 ./run
