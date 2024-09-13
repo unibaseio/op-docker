@@ -101,6 +101,7 @@ Stop all working opstack containers
 
 ```shell
 docker stop $(docker ps -a -q -f "name=opstack-*")
+docker remove $(docker ps -a -q -f "name=opstack-*")
 ```
 
 Remove opstack images
